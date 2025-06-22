@@ -39,6 +39,23 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Design theme */
+
+  --color-dark-black: #0d141c;
+  --color-dark-white: #f7fafc;
+  --color-dark-blue: #4f7396;
+  --color-primary-blue: #1773cf;
+  --color-light-gray: #e5e8eb;
+  --color-gray-gradient: linear-gradient(180deg, #000000 0%, #000000 100%);
+
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+
+  /* Design theme */
 }
 
 :root {
