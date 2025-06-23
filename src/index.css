@@ -48,6 +48,7 @@
   --color-primary-blue: #1773cf;
   --color-light-gray: #e5e8eb;
   --color-gray-gradient: linear-gradient(180deg, #000000 0%, #000000 100%);
+  --color-border-input: #d1dbe8;
 
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
