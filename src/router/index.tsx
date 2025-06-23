@@ -6,6 +6,7 @@ import {
 import RootLayout from "./root";
 import Home from "@/pages/Home/Home";
 import Login from "@/pages/Login/Login";
+import Register from "@/pages/Register/Register";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,7 +14,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
 
       <Route path="login" element={<Login />} />
-      {/* <Route path="register" element={<Register />} /> */}
+      <Route path="register" element={<Register />} />
       {/* <Route path="*" element={<NotFound />} /> */}
     </Route>
   )

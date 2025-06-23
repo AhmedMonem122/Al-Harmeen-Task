@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "../../api/axios";
 import { isAxiosError } from "axios";
 import { useForm } from "react-hook-form";
@@ -17,11 +17,20 @@ const Login = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  const navigate = useNavigate();
+
   const schema = yup.object().shape({
     email: yup.string().email("Invalid email").required("Email is required"),
     password: yup
       .string()
       .min(8, "Password must be at least 8 characters")
+      .matches(
+        /[^a-zA-Z0-9]/,
+        "Passwords must have at least one non alphanumeric character"
+      )
+      .matches(/[a-z]/, "Passwords must have at least one lowercase ('a'-'z')")
+      .matches(/[A-Z]/, "Passwords must have at least one uppercase ('A'-'Z')")
+      .matches(/[0-9]/, "Passwords must have at least one digit ('0'-'9')")
       .required("Password is required"),
   });
 
@@ -40,7 +49,7 @@ const Login = () => {
       localStorage.setItem("token", response.data.token);
 
       toast.success("Login successful!");
-      // Handle successful login (e.g., redirect, store token, etc.)
+      navigate("/", { replace: true });
     } catch (error) {
       if (isAxiosError(error)) {
         toast.error(error.response?.data?.message || "Login failed");
