@@ -3,7 +3,7 @@ import { BiSolidCylinder } from "react-icons/bi";
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 bg-dark-white py-3 px-2.5 sm:px-0 xxl:px-10 border-b border-light-gray">
+    <nav className="sticky top-0 z-50 bg-dark-white py-3 px-2.5 sm:px-0 xxl:px-10 border-b border-light-gray">
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <a href="" className="text-dark-black flex items-center gap-4">
