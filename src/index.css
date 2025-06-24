@@ -51,6 +51,8 @@
   --color-border-input: #d1dbe8;
   --color-dashboard-card: #e8edf2;
 
+  --font-work-sans: "Work Sans", sans-serif;
+
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;

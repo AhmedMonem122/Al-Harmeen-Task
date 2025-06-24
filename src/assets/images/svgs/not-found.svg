@@ -1,0 +1,49 @@
+<svg
+  viewBox="0 0 512 512"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-full h-auto"
+>
+  <rect width="512" height="512" rx="32" fill="#F3F4F6" />
+  <path
+    d="M140 400h232v16a8 8 0 01-8 8H148a8 8 0 01-8-8v-16z"
+    fill="#D1D5DB"
+  />
+  <rect x="160" y="240" width="40" height="160" rx="8" fill="#6B7280" />
+  <rect x="312" y="240" width="40" height="160" rx="8" fill="#6B7280" />
+  <path
+    d="M128 240h256v16a8 8 0 01-8 8H136a8 8 0 01-8-8v-16z"
+    fill="#9CA3AF"
+  />
+  <path
+    d="M200 160h112v80H200z"
+    fill="#FBBF24"
+    stroke="#000"
+    strokeWidth="4"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M200 160l-20-40h152l-20 40H200z"
+    fill="#F59E0B"
+    stroke="#000"
+    strokeWidth="4"
+    strokeLinejoin="round"
+  />
+  <circle cx="180" cy="424" r="12" fill="#111827" />
+  <circle cx="332" cy="424" r="12" fill="#111827" />
+  <path
+    d="M240 192h32v16h-32zM272 192l4 48M236 192l-4 48"
+    stroke="#000"
+    strokeWidth="4"
+  />
+  <text
+    x="50%"
+    y="480"
+    textAnchor="middle"
+    fill="#6B7280"
+    fontSize="20"
+    fontFamily="sans-serif"
+  >
+    🚧 Under Construction 🚧
+  </text>
+</svg>

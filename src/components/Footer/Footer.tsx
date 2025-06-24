@@ -15,7 +15,7 @@ const Footer = () => {
           </NavLink>
         </li>
       </ul>
-      <p className="">@2024 BuildRight. All rights reserved.</p>
+      <p>@{new Date().getFullYear()} Ahmed Monem. All rights reserved.</p>
     </footer>
   );
 };

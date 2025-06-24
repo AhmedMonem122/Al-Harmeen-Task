@@ -14,7 +14,7 @@ import { BiSolidCylinder } from "react-icons/bi";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const { setUserData } = useAuth();
+  const { setUserData, userData } = useAuth();
 
   const navigate = useNavigate();
 
@@ -59,12 +59,18 @@ const Navbar = () => {
                   <DropdownMenuTrigger asChild>
                     <Avatar className="cursor-pointer">
                       <AvatarImage src="https://github.com/shadcn.png" />
-                      <AvatarFallback>CN</AvatarFallback>
+                      <AvatarFallback>
+                        {userData?.FirstName.charAt(0).toUpperCase()}
+                        {userData?.LastName.charAt(0).toUpperCase()}
+                      </AvatarFallback>
                     </Avatar>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-56" align="start">
                     <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                    <DropdownMenuItem asChild className="[&.active]:bg-accent">
+                    <DropdownMenuItem
+                      asChild
+                      className="[&.active]:bg-accent [&.active]:font-bold"
+                    >
                       <NavLink to="/dashboard">Dashboard</NavLink>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
