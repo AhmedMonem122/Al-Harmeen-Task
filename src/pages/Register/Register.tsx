@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Loader2 } from "lucide-react";
+import useAuth from "@/hooks/use-auth";
 
 const schema = yup.object().shape({
   firstName: yup.string().required("First name is required"),
@@ -34,6 +35,8 @@ const schema = yup.object().shape({
 });
 
 const Register = () => {
+  const { saveUserData } = useAuth();
+
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordConfirm, setShowPasswordConfirm] = useState(false);
   const [isAnimatingPassword, setIsAnimatingPassword] = useState(false);
@@ -63,6 +66,7 @@ const Register = () => {
       const response = await axios.post("/Auth/register", data);
       localStorage.setItem("token", response.data.token);
       toast.success("Registration successful!");
+      saveUserData();
       navigate("/", { replace: true });
     } catch (error) {
       if (isAxiosError(error)) {

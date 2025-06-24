@@ -11,8 +11,11 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Loader2 } from "lucide-react";
+import useAuth from "@/hooks/use-auth";
 
 const Login = () => {
+  const { saveUserData } = useAuth();
+
   const [showPassword, setShowPassword] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -49,6 +52,7 @@ const Login = () => {
       localStorage.setItem("token", response.data.token);
 
       toast.success("Login successful!");
+      saveUserData();
       navigate("/", { replace: true });
     } catch (error) {
       if (isAxiosError(error)) {
